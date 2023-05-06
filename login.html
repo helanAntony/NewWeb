@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+      #home #myModal
+      {
+          margin:0px;
+          background-image:url(back-img.jpg);
+          color:#151614;
+          font-family:Arial, Helvetica, sans-serif;
+      }  
+       
+      #main
+      {
+            width:600px;  height:auto; 
+            overflow:hidden; padding-bottom:20px; 
+            margin-left:auto; margin-right:auto; 
+            border-radius:5px; padding-left:10px; 
+            margin-top:100px; border-top:3px double #1b1616; 
+            border-bottom:3px double #110d0d;
+            padding-top:20px;
+      } 
+
+      #main table
+      {
+             font-family:"Comic Sans MS", cursive;
+      }
+
+      #main .tb
+      {
+            height:28px; width:230px; 
+            border:1px solid #0c0705; 
+            color:#1d100a; font-weight:bold; 
+            border-left:5px solid #0a0707; opacity:0.9;
+    }  
+
+      #main .tb:focus
+      {
+            height:28px; border:1px solid #5f2001;
+            outline:none; border-left:5px solid #4b0202;
+    }
+  
+      #main .login{
+        background-color: #9b969683;
+      }
+      #main .btn
+      {
+                width:150px; height:32px; outline:none; 
+                color:#f7f7f779; font-weight:bold; 
+                border:0px solid #4e1b01; 
+                text-shadow: 0px 0.5px 0.5px rgb(109, 14, 14);
+                border-radius: 20px; font-weight: 600;
+                color:#050303; letter-spacing: 1px; 
+                font-size:14px; background-color:#f3f3f386; 
+                -webkit-transition: 1s; -moz-transition: 1s; transition: 1s;
+        }
+    
+      #main .btn:hover
+      {
+            background-color:#10b4a7; outline:none; 
+            border-radius: 20px; color:#150357; 
+            border:1px solid #110909;
+            -webkit-transition: 1s; 
+            -moz-transition: 1s; transition: 1s; 
+     }
+      
+    </style>
+  
+    </head>
+  
+      <body>
+      <div id="main">
+      <div class="h-tag"> 
+      <div class="login" id="myForm">
+          <table cellspacing="2" align="center" cellpadding="8" border="0">
+            <tr>
+            <td> <input type="email" name="emailid" id="emailid" placeholder="email id" class="tb"></td>
+            </tr>
+            <tr>
+            <td><input type="password" placeholder="Password" id="pass" class="tb" /></td>
+            </tr>
+            <tr>
+              <td> <input type="submit" value="LOGIN" class="btn" onclick="Login()" /></td> 
+            </tr>
+            </table>     
+      </div>
+      
+      </div>
+      <script>
+    
+        function Login()
+          {         
+              var email= document.getElementById("emailid").value;   
+              var pwd= document.getElementById("pass").value;		
+              var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+      
+              if(email==""){
+                  alert("Please enter your user email id : ");
+              }
+              else if (!filter.test(email))
+              {
+                  alert("Invalid email : ");
+              }
+              else if(pwd=='')
+              {
+                  alert("Please enter Password : ");
+              }
+              else
+              {				                            
+                     alert("Thank You for Login : ");          
+              }
+             
+          }
+          
+      </script>
+      </body>
+</html>
+  
